@@ -1,0 +1,201 @@
+@charset "utf-8";
+/* CSS Document */
+
+img{
+    max-width:100%;
+}
+h2{
+    font-size:1.25rem;
+    text-transform: uppercase;  
+    color:#191921;
+    margin-bottom:20px;
+    font-weight:700;
+}
+h2:after{
+    content:"";
+    border-bottom:3px solid #191921;
+    width:40px;
+    display: block;
+    padding-top:10px;
+}
+h3{
+    font-size:1rem;
+    text-transform: uppercase;
+    font-weight:700;
+}
+p{
+    line-height:1.5rem;
+    font-size:0.9rem;
+    margin:30px 0px;
+    color:#191921;
+}
+.readmore{
+    color:white;
+    background-color:#C5A768;
+    letter-spacing:0.1rem;
+    text-transform: uppercase;
+    padding:5px 20px;
+    font-weight:500;
+    text-decoration: none;
+}
+#container > div,section,nav,header,main,footer{
+  /*  padding:1rem; */
+}
+main,#mainimg,#services,footer{
+    background-color:#191921;
+}
+main,#projects,#services,#news,#contact,#newsletter{
+    padding:3.125rem;
+}
+#container{
+    font-family: 'Montserrat', sans-serif;
+    width:80%;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 6rem 40rem 35rem 40rem 32rem 25rem 30rem 25rem 6rem;
+    grid-template-areas: 
+        "logo nav"
+        "header header"
+        "main mainimg"
+        "bigimg bigimg"
+        "projects projects"
+        "services services"
+        "news news"
+        "contact newsletter"
+        "footer footer";
+}
+
+/* logo en navigatie */
+#logo{ 
+    grid-area:logo;
+    align-self:center;
+}
+#logo h1{
+    font-size:1.25rem;
+    font-weight:700;
+    letter-spacing:0.1rem;
+    text-transform: uppercase;
+}
+#logo h1 a{
+    color:#C5A768;
+    text-decoration: none;
+}
+nav{ 
+    grid-area:nav;
+    justify-self:end;
+    align-self:center;
+}
+nav ul li{
+    display: inline-grid;
+    margin-right:0.6rem;
+}
+nav ul li a{
+    font-size:0.8rem;
+    text-transform: uppercase;
+    color:#191921;
+    text-decoration: none;
+}
+nav ul li a:before{
+    content:"// "
+}
+nav ul li a.active{
+    color:#C5A768;
+}
+/* header */
+header{  
+    grid-area:header;
+    display: grid;
+    grid-template-columns: 97% 3%;
+}
+#social{
+    writing-mode:vertical-lr;
+    align-self:center;
+    text-align: center;
+}
+#fb,#insta{
+    background-color:#191921;
+    padding:0.6rem;
+    margin:50px 0px;
+    display: inline-block;
+}
+#fb a,#insta a{
+    color:white;
+    text-transform: uppercase;
+    text-decoration:none;
+    font-size:0.8rem;
+}
+
+/* main */
+main{grid-area:main}
+#mainimg{grid-area:mainimg;}
+main h2,#services h2, main p, #services p{
+    color:white; 
+}
+main h2:after,#services h2:after{
+    border-bottom:3px solid white;
+}
+
+
+/* big image */
+#bigimg{grid-area:bigimg;}
+#projects{grid-area:projects;}
+#subproj,#articles{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:1rem;
+}
+figcaption{
+    position:absolute;
+    color:white;
+    background-color:rgba(25,25,33,0.80);
+    padding:0.9rem;
+}
+#services{grid-area:services;}
+#news{grid-area:news;}
+
+/* contact */
+#contact{
+    grid-area:contact;
+    background-color:#C5A768;
+}
+#contact a{
+    color:white;
+    text-transform: uppercase;
+    margin-top:20px;
+    display:block;
+}
+#newsletter{
+    grid-area:newsletter;
+    background-color:#C5A768;
+}
+#newsletter input[type=text]{
+    font-family: 'Montserrat', sans-serif;
+    width:80%;
+    border:none;
+    height:35px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom:20px;
+}
+#newsletter input[type=button]{
+    font-family: 'Montserrat', sans-serif;
+    width:80%;
+    border:none;
+    height:35px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color:#191921;
+    color:white;
+}
+
+/* footer */
+footer{
+    grid-area:footer;
+    background-color:#191921;
+}
+footer p{
+    color:white;
+    text-transform: uppercase;
+    text-align: center;
+}

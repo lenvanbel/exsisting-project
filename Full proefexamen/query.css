@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media (max-width:767px){
+    #container{
+        width:80%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3rem 10rem 14rem auto auto auto auto auto auto auto auto 6rem;
+        grid-template-areas: 
+            "logo"
+            "nav"
+            "header"
+            "main"
+            "mainimg"
+            "bigimg"
+            "projects"
+            "services"
+            "news"
+            "contact"
+            "newsletter"
+            "footer";
+        }
+        header{  
+            grid-template-columns:1fr;
+            grid-template-rows: repeat(3,1fr);
+        }
+        #subproj,#articles{
+            grid-template-columns:1fr;
+            grid-template-rows: repeat(3,1fr);
+        }
+        figure:nth-child(4),figure:nth-child(5),figure:nth-child(6),figure:nth-child(7),figure:nth-child(8),article:nth-child(3),article:nth-child(4){
+            display: none;
+        }
+        #logo,nav{ 
+            justify-self:center;
+            text-align: center;
+        }
+        nav ul li{
+            display:block;
+            margin:0px;
+        }
+        #social{
+            position:fixed;
+            align-self:baseline;
+            top:0px;
+            right:0px;
+        }
+        #fb,#insta{
+            margin:10px 0px;
+        }
+        #mainimg,#bigimg{
+            display: none;
+        }
+        h3{
+            padding-top:20px;
+        }
+        #newsletter input[type=text]{
+            width:100%;
+        }
+        #newsletter input[type=button]{
+            width:100%;
+        }
+}
